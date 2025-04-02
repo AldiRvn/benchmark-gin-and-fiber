@@ -1,5 +1,6 @@
 # benchmark-gin-and-fiber
-My simple benchmark between gin and fiber.
+My simple benchmark between Gin and Fiber.
+
 Each test file use 1 endpoint with GET method that returning static object contain just 1 field.
 
 ## Device
