@@ -18,7 +18,8 @@ func BenchmarkFiber(b *testing.B) {
 		})
 	})
 
-	router := adaptor.FiberApp(app) //? Adaptor konversi fasthttp ke net/http agar dapat dilakukan pemanggilan ServeHTTP
+	//? Adaptor konversi fasthttp ke net/http agar dapat dilakukan pemanggilan ServeHTTP
+	router := adaptor.FiberApp(app) 
 
 	req := httptest.NewRequest("GET", "/ping", http.NoBody)
 	for i := 0; i < b.N; i++ {
