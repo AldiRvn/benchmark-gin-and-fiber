@@ -10,7 +10,7 @@ import (
 
 func BenchmarkGin(b *testing.B) {
 	gin.SetMode(gin.ReleaseMode)
-	router := gin.Default()
+	router := gin.New()
 
 	router.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
