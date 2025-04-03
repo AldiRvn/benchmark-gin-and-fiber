@@ -9,6 +9,7 @@ import (
 )
 
 func BenchmarkGin(b *testing.B) {
+	b.ReportAllocs()
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.New()
 
